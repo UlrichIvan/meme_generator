@@ -1,0 +1,32 @@
+body {
+  background-color: #123;
+}
+.meme-header {
+  height: 50px;
+  max-height: 50px;
+}
+
+.meme-body {
+  height: calc(100vh - 50px);
+  max-height: calc(100vh - 50px);
+  padding-bottom: 3rem;
+}
+
+.meme-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.meme-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.meme-body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.meme-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
