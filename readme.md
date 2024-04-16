@@ -29,8 +29,9 @@ you must open two terminals to run each cmd line below after clone git repositor
 ```cmd
       #1.first terminal
       git clone https://github.com/UlrichIvan/meme_generator.git
-
-      cd meme_generator
+      
+      # go in the frontend folder since meme_generator folder
+      cd meme_generator/frontend
 
       # if you have yarn run cmd below
       $ yarn install
@@ -39,7 +40,9 @@ you must open two terminals to run each cmd line below after clone git repositor
       $ npm install
 
       #2. second terminal
-      cd server
+      
+      # go in the server folder since meme_generator folder
+      cd meme_generator/server
 
       # if you have yarn run cmd below
       $ yarn install
@@ -53,7 +56,7 @@ you must open two terminals to run each cmd line below after clone git repositor
 ## run react client app :
 
 ```cmd
-      #inside the meme_generator folder run the cmd below
+      #inside the frontend folder run the cmd below
 
       #if you have yarn
       $ yarn run start
