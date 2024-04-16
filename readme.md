@@ -22,7 +22,7 @@ this application is the memes generator,you can :
 
 you must open two terminals to run each cmd line below after clone git repository:
 
-- 1.first: react applications
+- 1.first: react application
 
 - 2.second: nodejs backend application
 
