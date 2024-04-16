@@ -1,13 +1,19 @@
 import React from "react";
 
-function SelectFile(props) {
+function SelectFile({ isloading, isdeleting, ...props }) {
   return (
     <>
       <div
         {...props}
-        className="select-file-message p-2 btn btn-primary text-capitalize d-inline-flex align-items-center"
+        className={`select-file-message p-2 btn btn-primary text-capitalize d-inline-flex align-items-center ${
+          isloading ? "disabled" : ""
+        }`}
       >
-        <div className="me-2">select your images</div>
+        {isloading || isdeleting ? (
+          <div className="me-2">loading...</div>
+        ) : (
+          <div className="me-2">select your images</div>
+        )}
         <div className="icon ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
