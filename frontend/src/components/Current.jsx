@@ -2,7 +2,7 @@ import React, { useCallback, useContext, useRef, useState } from "react";
 import Draggable from "react-draggable";
 import "./css/current.css";
 import InputSize from "./InputSize";
-import { Session, download } from "../utils";
+import { Session, download, weight } from "../utils";
 import * as htmlToImage from "html-to-image";
 import { v4 } from "uuid";
 import { memesContext } from "../contexts/memesProvider";
@@ -18,6 +18,7 @@ function Current({ url = "#", ext = "" }) {
     textTransform: "lowercase",
     fontSize: "10",
     unity: "px",
+    fontWeight: "",
   });
 
   const [imageStyle, setImageStyle] = useState({
@@ -77,8 +78,7 @@ function Current({ url = "#", ext = "" }) {
 
   return (
     <div className="current bg-body text-dark rounded justify-content-center d-flex p-2">
-      <div className="current-header">
-        <h3 className="text-center text-capitalize">Your image</h3>
+      <div className="current-header d-flex justify-content-center align-items-center flex-column">
         <div className="image position-relative border m-2" ref={imageRef}>
           {text && (
             <Draggable bounds=".image">
@@ -110,7 +110,6 @@ function Current({ url = "#", ext = "" }) {
         </div>
       </div>
       <div className="current-setting ms-2">
-        <h3 className="text-center text-capitalize">custom your text</h3>
         <div className="add-text flex-column d-flex">
           {/* text value */}
           <div className="form-group flex-grow-1">
@@ -144,6 +143,31 @@ function Current({ url = "#", ext = "" }) {
                 setTextStyle((style) => ({ ...style, color: e.target.value }))
               }
             />
+          </div>
+
+          {/* font weight */}
+          <div className="form-group flex-grow-1">
+            <h6 className="text-transform fw-bolder text-capitalize text-secondary mb-0">
+              font weight
+            </h6>
+            <select
+              className="form-select text-capitalize"
+              id="fontWeigth"
+              aria-label="Floating label select text transformt"
+              value={textStyle.fontWeight}
+              onChange={(e) =>
+                setTextStyle((style) => ({
+                  ...style,
+                  fontWeight: e.target.value,
+                }))
+              }
+            >
+              {weight.map((val) => (
+                <option key={v4()} value={val}>
+                  {val}
+                </option>
+              ))}
+            </select>
           </div>
 
           {/* text transform */}

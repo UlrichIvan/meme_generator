@@ -1,5 +1,22 @@
 export const backend_url = "http://localhost:5000";
 
+export const weight = [
+  100,
+  200,
+  300,
+  400,
+  500,
+  600,
+  700,
+  800,
+  900,
+  "bolder",
+  "bolder",
+  "lighter",
+  "normal",
+  "unset",
+];
+
 /**
  * Session object to manage session of user
  */

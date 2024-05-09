@@ -12,13 +12,11 @@ this application is the memes generator,you can :
 
 - you can see your meme create in the gallery section
 
-- support images : .png , .jpeg, .jpg and .svg
-
 ## require :
 
 - nodejs
 
-- npm(required) or yarn(optional)
+- npm or yarn
 
 ## usage :
 
